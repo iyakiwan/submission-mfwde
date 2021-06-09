@@ -1,16 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Restaurant Apps Starter Project</title>
+    <title>Mufti Restaurant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./public/images/icon/icon_rest.png">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
+
 <body>
-<h1>Restaurant Apps Starter Project</h1>
-<p>Hallo coders! Anda berhasil menjalankan starter project.</p>
-<p>Jangan lupa untuk menggunakan salah satu gambar yang berada pada ./images/heros sebagai background hero elemen</p>
-<img src="./images/heros/hero-image_1.jpg" width="450" alt="">
-<img src="./images/heros/hero-image_2.jpg" width="450" alt="">
-<img src="./images/heros/hero-image_3.jpg" width="450" alt="">
-<img src="./images/heros/hero-image_4.jpg" width="450" alt="">
+    <header class="header">
+        <div class="header_inner">
+            <h1 tabindex="0" class="header_title">
+                Mufti Restaurant
+            </h1>
+        </div>
+        <a tabindex="0" id="menu" class="header_menu">☰</a>
+
+        <nav id="drawer" class="nav">
+            <ul class="nav_list">
+                <li class="nav_item"><a href="index.html">Home</a></li>
+                <li class="nav_item"><a href="#favorite">Favorite</a></li>
+                <li class="nav_item"><a href="https://www.linkedin.com/in/mufti-alie-satriawan-348817171/"
+                        target="blank_">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <div class="hero_inner">
+            <h1 tabindex="0" class="hero_title">Beragam restaurant yang anda mau ada disini</h1>
+            <p tabindex="0" class="hero_desc">Disini kamu dapat menemukan restaurant terbaik yang belum pernah kamu temukan. <br> 
+                <a href="#restaurant-title" class="skip-link"> Yuk Cari !!</a></p>
+        </div>
+    </div>
+
+    <main>
+        <section class="content">
+            <div class="list">
+                <h1 tabindex="0" class="list_title" id="restaurant-title">List Restaurant</h1>
+                <div class="restaurant" id="restaurant-list">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p tabindex="0">Copyright © 2021 - Mufti Alie Satriawan</p>
+    </footer>
 </body>
+
 </html>

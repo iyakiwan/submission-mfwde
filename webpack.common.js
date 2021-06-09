@@ -1,5 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -21,6 +23,12 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/,
+        use: [
+          'file-loader',
+        ],
+      },
     ],
   },
   plugins: [
@@ -32,9 +40,23 @@ module.exports = {
       patterns: [
         {
           from: path.resolve(__dirname, 'src/public/'),
-          to: path.resolve(__dirname, 'dist/'),
+          to: path.resolve(__dirname, 'dist/public'),
         },
+        {
+          from: path.resolve(__dirname, 'src/data/'),
+          to: path.resolve(__dirname, 'dist/data'),
+        }, {
+          from: path.resolve(__dirname, 'src/scripts/'),
+          to: path.resolve(__dirname, 'dist/scripts'),
+        }, {
+          from: path.resolve(__dirname, 'src/styles/'),
+          to: path.resolve(__dirname, 'dist/styles'),
+        }
       ],
     }),
+    new FaviconsWebpackPlugin({
+      logo: path.resolve(__dirname, 'src/public/images/icon/icon_rest.png'),
+    }),
+    new CleanWebpackPlugin(),
   ],
 };
