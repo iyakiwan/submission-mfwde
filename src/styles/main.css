@@ -20,6 +20,11 @@ body {
   color: #424242;
 }
 
+button {
+  min-width: 44px;
+  min-height: 44px;
+}
+
 /* Header */
 
 .header {
@@ -153,8 +158,8 @@ main {
   position: absolute;
   top: -40px;
   left: 0;
-  background-color: #bf1722;
-  color: white;
+  background-color: white;
+  color: black;
   padding: 8px;
   z-index: 100;
 }
