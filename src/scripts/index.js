@@ -1,6 +1,21 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
 import '../styles/responsive.css';
-import main from "./component/main";
+import App from './views/app';
+// import main from './component/main';
 
-main();
+const app = new App({
+  button: document.querySelector('#menu'),
+  drawer: document.querySelector('#drawer'),
+  hero: document.querySelector('.hero'),
+  content: document.querySelector('#main'),
+});
+// main();
+
+window.addEventListener('hashchange', () => {
+  app.renderPage();
+});
+
+window.addEventListener('load', () => {
+  app.renderPage();
+});

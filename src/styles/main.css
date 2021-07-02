@@ -97,11 +97,6 @@ button {
   display: flex;
   align-items: center;
   min-height: 400px;
-  background-image: linear-gradient(
-      rgba(170, 170, 170, 0.1),
-      rgba(70, 70, 70, 0.5)
-    ),
-    url("../public/images/heros/hero-image_4.jpg");
   background-position: center;
   width: 100%;
   text-align: center;
@@ -205,15 +200,48 @@ main {
   transition: 0.3s opacity;
 }
 
-.restaurant-item_title p {
+.restaurant-item_title a {
+  color: black;
   text-decoration: none;
-  color: inherit;
 }
 
 .restaurant-item_description {
   margin-top: 16px;
   font-size: 12px;
   line-height: 1.5em;
+}
+
+/*
+    Restaurant
+  */
+
+.restaurant-detail {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px 16px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.restaurant-detail .restaurant_title {
+  text-align: center;
+}
+
+.restaurant-detail .restaurant_poster {
+  width: 100%;
+  max-width: 400px;
+}
+
+.restaurant-detail .restaurant_info h3 {
+  margin: 8px 0;
+}
+
+.restaurant-detail ul,
+ol {
+  margin-left: 24px;
 }
 
 /* footer */
@@ -229,4 +257,10 @@ footer p {
   display: inline-block;
   text-decoration: none;
   color: #fff;
+}
+
+.search-container input,
+.search-container button i.fa {
+  padding: 5px;
+  border-radius: 5px;
 }

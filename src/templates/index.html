@@ -3,11 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Mufti Restaurant</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./public/images/icon/icon_rest.png">
+    <meta name="description" content="Choose your favorite menu">
+
+    <link rel="shortcut icon" href="favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <title>Mufti Restaurant</title>
 </head>
 
 <body>
@@ -18,34 +21,30 @@
                 Mufti Restaurant
             </h1>
         </div>
-        <button tabindex="0" id="menu" class="header_menu">☰</button>
+        <button id="menu" class="header_menu" aria-label="navigation-menu">☰</button>  
 
         <nav id="drawer" class="nav">
             <ul class="nav_list">
-                <li class="nav_item"><a href="index.html">Home</a></li>
-                <li class="nav_item"><a href="#">Favorite</a></li>
+                <li class="nav_item"><a href="#/home">Home</a></li>
+                <li class="nav_item"><a href="#/favorite">Favorite</a></li>
                 <li class="nav_item"><a href="https://www.linkedin.com/in/mufti-alie-satriawan-348817171/"
                         target="blank_">About Us</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="hero">
+    <div class="hero" style="background-image: linear-gradient(
+        rgba(170, 170, 170, 0.1),
+        rgba(70, 70, 70, 0.5)
+      ),
+      url('./images/heros/hero-main.jpg');">
         <div class="hero_inner">
             <h1 tabindex="0" class="hero_title">Beragam restaurant yang anda mau ada disini</h1>
             <p tabindex="0" class="hero_desc">Disini kamu dapat menemukan restaurant terbaik yang belum pernah kamu temukan. <br>Yuk Cari !!</p>
         </div>
     </div>
 
-    <main>
-        <section class="content">
-            <div class="list">
-                <h1 tabindex="0" class="list_title" id="restaurant-title">List Restaurant</h1>
-                <div class="restaurant" id="restaurant-list">
-                </div>
-            </div>
-        </section>
-    </main>
+    <main id="main"></main>
 
     <footer>
         <p tabindex="0">Copyright © 2021 - Mufti Restaurant</p>
