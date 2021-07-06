@@ -20,7 +20,7 @@ body {
   color: #424242;
 }
 
-button {
+button, input {
   min-width: 44px;
   min-height: 44px;
 }
@@ -216,14 +216,13 @@ main {
   */
 
 .restaurant-detail {
-  margin: 0 auto;
+  margin: 32px auto;
   width: 100%;
   max-width: 800px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 18px 16px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px;
 }
 
 .restaurant-detail .restaurant_title {
