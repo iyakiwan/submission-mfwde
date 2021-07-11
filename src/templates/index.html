@@ -5,13 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Choose your favorite menu">
-    <meta name="theme-color" content="#000000"/>
+    <meta name="theme-color" content="#000000" />
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
 
     <link rel="shortcut icon" href="favicon.png">
     <link rel="manifest" href="manifest.json">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
+    <style>
+        @media screen and (max-width: 600px) {
+            .hero {
+                background-image: linear-gradient(rgba(170, 170, 170, 0.1),
+                        rgba(70, 70, 70, 0.5)),
+                    url('./images/hero-main-small.jpg');
+            }
+        }
+
+        @media screen and (min-width: 601px) {
+            .hero {
+                background-image: linear-gradient(rgba(170, 170, 170, 0.1),
+                        rgba(70, 70, 70, 0.5)),
+                    url('./images/hero-main-large.jpg');
+            }
+        }
+    </style>
     <title>Mufti Restaurant</title>
 </head>
 
@@ -23,7 +41,7 @@
                 Mufti Restaurant
             </h1>
         </div>
-        <button id="menu" class="header_menu" aria-label="navigation-menu">☰</button>  
+        <button id="menu" class="header_menu" aria-label="navigation-menu">☰</button>
 
         <nav id="drawer" class="nav">
             <ul class="nav_list">
@@ -35,14 +53,11 @@
         </nav>
     </header>
 
-    <div class="hero" style="background-image: linear-gradient(
-        rgba(170, 170, 170, 0.1),
-        rgba(70, 70, 70, 0.5)
-      ),
-      url('./images/heros/hero-main.jpg');">
+    <div class="hero">
         <div class="hero_inner">
             <h1 tabindex="0" class="hero_title">Beragam restaurant yang anda mau ada disini</h1>
-            <p tabindex="0" class="hero_desc">Disini kamu dapat menemukan restaurant terbaik yang belum pernah kamu temukan. <br>Yuk Cari !!</p>
+            <p tabindex="0" class="hero_desc">Disini kamu dapat menemukan restaurant terbaik yang belum pernah kamu
+                temukan. <br>Yuk Cari !!</p>
         </div>
     </div>
 

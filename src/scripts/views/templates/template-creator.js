@@ -50,7 +50,7 @@ const createRestarurantDetailTemplate = (restaurant) => `
 
 const createRestaurantItemTemplate = (restaurant) => `
   <article class="restaurant-item">
-      <img tabindex="0" class="restaurant-item_thumbnail" src="${CONFIG.BASE_IMAGE_URL}${restaurant.pictureId}"
+      <img tabindex="0" class="lazyload" style="max-width: 100%; max-height: 280px;" data-src="${CONFIG.BASE_IMAGE_URL}${restaurant.pictureId}"
           alt="${restaurant.name}">
       <div class="restaurant-item_content">
           <h1 class="restaurant-item_title"><a href="${`/#/detail/${restaurant.id}`}">${restaurant.name}</a></h1>
